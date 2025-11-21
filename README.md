@@ -58,7 +58,7 @@ echo "[+] Sniffing over interface $INTERFACE"
 tshark -i $INTERFACE -w "$PCAP_PATH" &
 TSHARK_PID=$!
 
-# Making sure to close tshark
+# Cleanup routine
 cleanup() {
     if [ "$TSHARK_PID" -ne 0 ]; then
         echo "[+] Stopping tshark..."
