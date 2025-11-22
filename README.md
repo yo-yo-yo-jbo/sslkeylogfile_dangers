@@ -20,7 +20,7 @@ SERVER_HANDSHAKE_TRAFFIC_SECRET ee5743c72e4991a464d37cb4e66f310451bfe07e09aafd28
 
 In environments like Windows it's not that interesting, since [process injection and hooking](https://github.com/yo-yo-yo-jbo/injection_and_hooking_intro/) are so easy to accomplish.  
 However, on macOS things are different - and injection is not common at all (due to hardened runtime, AMFI and other mechanisms).  
-Also, since Claude embeds a browser in it (Chromium)[https://www.chromium.org] - it (and other Apps, e.g. built with [Electron](https://www.electronjs.org)) are susceptible.
+Also, since Claude embeds a browser in it ([Chromium](https://www.chromium.org)) - it (and other Apps, e.g. built with [Electron](https://www.electronjs.org)) are susceptible.
 
 ## How to utilize SSLKEYLOGFILE for SSL stripping
 I will attach a complete script here for macOS, I will also be relying on [tshark](https://tshark.dev/setup/install/) to do the heavyweight lifting:
